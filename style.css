@@ -1,0 +1,35 @@
+body {
+    background-color: #f0f0f0; /* Soft light gray for a balanced look */
+    background-image: url("Muaps.gif");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.centered-text {
+    position: absolute;
+    top: 10%; /* Keep text at the top on larger screens */
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 6rem;
+    color: #333;
+    font-weight: bold;
+    text-align: center;
+    text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.7); /* Stronger shadow */
+    width: 100%; /* Wider text container */
+    max-width: 1100px; /* Prevents excessive width */
+}
+
+/* On smaller screens (mobile), center the text and increase width */
+@media (max-width: 768px) {
+    .centered-text {
+        top: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 4.5rem; /* Adjust for better mobile scaling */
+        width: 95%; /* Even wider on mobile */
+        text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.6); /* Slightly softer shadow for mobile */
+    }
+}
